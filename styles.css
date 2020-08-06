@@ -1,0 +1,18 @@
+:root {
+	--timer-color: #05ec8b;
+
+}
+
+.circle-container {
+
+}
+
+.circle {
+	r: 95;
+	cx: 100;
+	cy: 100;
+
+	fill: none;
+	stroke: var(--timer-color);
+	stroke-width: 10;
+}
