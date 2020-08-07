@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Pomodoro</title>
-		<meta charset="UTF-8"/>
-		<link rel="stylesheet" href="styles.css">
-	</head>
-	<body>
-		<svg width="200" height="200" class="circle-container">
-			<circle class="circle" />
-		</svg>
 
-		<script src="scripts.js"></script>
-	</body>
+<head>
+	<title>Pomodoro</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="main">
+		<div class="turns">1/4</div>
+
+		<div class="time-container">
+			<svg width="200" height="200" class="circle-container">
+				<circle class="background-circle" />
+				<circle class="circle" />
+			</svg>
+			<div class="time">88:88</div>
+		</div>
+
+		<div class="time-mode">Trabalho</div>
+
+		<div>
+			<button class="timer-control">Iniciar</button>
+			<button class="reset-button">Reiniciar</button>
+		</div>
+	</div>
+
+	<audio id="notification">
+		<source src="notification.mp3">
+	</audio>
+
+	<script src="scripts.js"></script>
+</body>
+
 </html>
