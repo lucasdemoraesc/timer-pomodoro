@@ -44,7 +44,6 @@ button:hover {
 	font-size: 1.5em;
 	padding: 12px 24px;
 	border-radius: 5px;
-	margin-bottom: 3px;
 }
 
 .time-container {
@@ -69,10 +68,6 @@ button:hover {
 }
 
 .background-circle, .circle {
-	r: 90;
-	cx: 100;
-	cy: 100;
-
 	fill: none;
 }
 
