@@ -5,6 +5,7 @@ const turnElement = document.querySelector('.turns');
 const controlButton = document.querySelector('.timer-control');
 const resetButton = document.querySelector('.reset-button');
 const notificationSound = document.querySelector('#notification');
+const timeContainerElement = document.querySelector('.time-container');
 
 let isRunning,
 	isBreakTime,
@@ -19,13 +20,29 @@ let isRunning,
 
 controlButton.addEventListener('click', toggleStartPause);
 resetButton.addEventListener('click', reset);
+timeContainerElement.addEventListener("click", function(e) {
+	e.preventDefault;
+
+	// -> removing the class
+	element.classList.remove("animated rotateIn");
+
+	// -> triggering reflow /* The actual magic */
+	// without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+	// Oops! This won't work in strict mode. Thanks Felis Phasma!
+	// element.offsetWidth = element.offsetWidth;
+	// Do this instead:
+	void element.offsetWidth;
+
+	// -> and re-adding the class
+	element.classList.add("animated rotateIn");
+  }, false);
 
 function startValues() {
 	isRunning = false;
 	isBreakTime = false;
-	workTime = 25 * 60;
-	breakTime = 25 * 60;
-	longBreakTime = 25 * 60;
+	workTime = .1 * 60;
+	breakTime = .1 * 60;
+	longBreakTime = .1 * 60;
 	totalTurns = 4;
 	currentTurn = 1;
 	totalTime = workTime;
@@ -68,6 +85,7 @@ function updateTimer() {
 
 function finishTurn() {
 	notificationSound.play();
+
 	nextTurn();
 	drawTurn();
 }

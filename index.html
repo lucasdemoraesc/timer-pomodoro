@@ -5,27 +5,28 @@
 	<title>Pomodoro</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.compat.css" integrity="sha512-5m1+8f8jC4ePfYvS39HmjqsYkkragJZaXV7kfreb5pytmTlDnZgXZ73JlYC0Ui25beVJMWLJq8AzDv4ZeXC9mg==" crossorigin="anonymous" />
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 	<div class="main">
-		<div class="turns">1/4</div>
+		<div class="turns animated slideInDown">1/4</div>
 
-		<div class="time-container">
+		<div class="time-container animated rotateIn">
 			<svg width="200" height="200" class="circle-container">
 				<circle class="background-circle" r="90" cx="100" cy="100" />
-				<circle class="circle" r="90" cx="100" cy="100"/>
+				<circle class="circle" r="90" cx="100" cy="100" />
 			</svg>
 			<div class="time">88:88</div>
 		</div>
 
-		<div class="time-mode">Trabalho</div>
+		<div class="time-mode animated zoomIn">Trabalho</div>
 
 		<div>
-			<button class="timer-control">Iniciar</button>
-			<button class="reset-button">Reiniciar</button>
+			<button class="timer-control animated slideInLeft">Iniciar</button>
+			<button class="reset-button animated slideInRight">Reiniciar</button>
 		</div>
 	</div>
 
