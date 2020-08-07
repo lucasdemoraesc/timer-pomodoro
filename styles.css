@@ -1,5 +1,5 @@
 :root {
-	--timer-color: #05ec8b;
+	--timer-color: #887bd3;
 }
 
 html, body {
@@ -9,8 +9,13 @@ html, body {
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #30384c;
 	color: #e7e7e7;
+
+	background: #3023ae;
+	background: -moz-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+	background: -webkit-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+	background: linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorsrt='#3023ae', endColor='#c86dd7');
 }
 
 button {
