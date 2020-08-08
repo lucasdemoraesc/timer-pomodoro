@@ -5,6 +5,7 @@ const turnElement = document.querySelector('.turns');
 const controlButton = document.querySelector('.timer-control');
 const resetButton = document.querySelector('.reset-button');
 const notificationSound = document.querySelector('#notification');
+const timeContainerElement = document.querySelector('.time-container');
 
 let isRunning,
 	isBreakTime,
@@ -41,6 +42,7 @@ function start() {
 	isRunning = true;
 	controlButton.innerText = 'Pausar';
 	timer = setInterval(updateTimer, 1000);
+	timeContainerElement.classList.remove('rotateIn');
 }
 
 function pause() {
@@ -54,6 +56,7 @@ function reset() {
 	startValues();
 	drawTime();
 	drawTurn();
+	runAnimation('rotateIn');
 }
 
 function updateTimer() {
@@ -68,8 +71,16 @@ function updateTimer() {
 
 function finishTurn() {
 	notificationSound.play();
+	runAnimation('swing');
 	nextTurn();
 	drawTurn();
+}
+
+function runAnimation(animation) {
+	timeContainerElement.classList.add(animation);
+	timeContainerElement.addEventListener('animationend', () => {
+		timeContainerElement.classList.remove(animation);
+	});
 }
 
 function nextTurn() {
