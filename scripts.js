@@ -24,9 +24,9 @@ resetButton.addEventListener('click', reset);
 function startValues() {
 	isRunning = false;
 	isBreakTime = false;
-	workTime = .1 * 60;
-	breakTime = .1 * 60;
-	longBreakTime = .1 * 60;
+	workTime = 25 * 60;
+	breakTime = 5 * 60;
+	longBreakTime = 15 * 60;
 	totalTurns = 4;
 	currentTurn = 1;
 	totalTime = workTime;
