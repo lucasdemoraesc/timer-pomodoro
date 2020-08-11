@@ -9,7 +9,7 @@ Single Page Application baseada no projeto desenvolvido pela *TreinaWeb*.
 - Animações no fim de cada turno
 - Deploy com vercel utilizando integração contínua
 
-:nerd_face: **As seguintes features estão em desenvolvimento e serão adicionadas em breve**
+:nerd_face: **As seguintes features estão em desenvolvimento e serão adicionadas em breve:**
 
 - Botão de configuração
 - Notificações
