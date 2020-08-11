@@ -55,12 +55,34 @@ button:hover {
 	position: relative;
 }
 
-.time {
+.time, .config, .config-tooltip-text  {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 3.2em;
+}
+
+.config {
+	top: 80%;
+	display: inline-block;
+	font-size: 1.3em;
+	cursor: pointer;
+	opacity: 30%;
+	transition: opacity 0.9s;
+}
+
+.config-tooltip-text {
+	font-size: 0.6em;
+	font-weight: 600;
+	top: -10px;
+	opacity: 0%;
+	transition: opacity 0.9s;
+}
+
+.config:hover, .config:hover .config-tooltip-text {
+	opacity: 80%;
+	transition: opacity 0.9s;
 }
 
 .time-mode {

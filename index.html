@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.compat.css" integrity="sha512-5m1+8f8jC4ePfYvS39HmjqsYkkragJZaXV7kfreb5pytmTlDnZgXZ73JlYC0Ui25beVJMWLJq8AzDv4ZeXC9mg==" crossorigin="anonymous" />
+	<script src="https://kit.fontawesome.com/c42ac314bc.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="styles.css">
 </head>
 
@@ -20,6 +21,38 @@
 				<circle class="circle" r="90" cx="100" cy="100" />
 			</svg>
 			<div class="time">00:00</div>
+			<div class="config">
+				<i class="fas fa-cog"></i>
+				<span class="config-tooltip-text">Configurar</span>
+			</div>
+		</div>
+
+		<div id="modal-dialog" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<label for="work-time-options">Tempo de trabalho:</label>
+				<select id="work-time-options" name="work-options">
+					<option value="25">25 minutos</option>
+					<option value="30">35 minutos</option>
+					<option value="40">45 minutos</option>
+					<option value="50">55 minutos</option>
+				</select>
+				<label for="break-time-options">Tempo de descanso:</label>
+				<select id="break-time-options" name="break-options">
+					<option value="5">5 minutos</option>
+					<option value="15">15 minutos</option>
+					<option value="25">25 minutos</option>
+					<option value="35">35 minutos</option>
+				</select>
+				<label for="long-break-time-options">Tempo de descanso longo:</label>
+				<select id="long-break-time-options" name="long-break-options">
+					<option value="5">5 minutos</option>
+					<option value="15">15 minutos</option>
+					<option value="25">25 minutos</option>
+					<option value="35">35 minutos</option>
+				</select>
+				<button class="modal-confirmation">Concluir</button>
+			</div>
 		</div>
 
 		<div class="time-mode animated zoomIn">Trabalho</div>
