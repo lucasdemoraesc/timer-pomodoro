@@ -16,4 +16,4 @@ Single Page Application baseada no projeto desenvolvido pela *TreinaWeb*.
 
 :hourglass: **Acesse em:** https://timer-pomodoro.vercel.app/ ou https://timerpomodoro.netlify.app/
 
-![Imagem da tela do aplicativo Pomodoro ](https://i.imgur.com/E06tgUW.png)
+![Imagem da tela do aplicativo Pomodoro ](https://i.imgur.com/9vJogUp.png)
