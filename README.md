@@ -1,7 +1,7 @@
 
 # :tomato: Pomodoro WebApp
 
-Single Page Application baseada no projeto desenvolvido pela *TreinaWeb*.
+Single Page Application baseada no projeto desenvolvido pela [*TreinaWeb*](https://github.com/treinaweb/treinaweb-javascript-gestao-tempo-pomodoro).
 
 :blush: **As seguintes features foram adicionadas ao projeto original:**
 
