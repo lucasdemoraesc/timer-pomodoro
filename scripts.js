@@ -21,6 +21,8 @@ let isRunning,
 controlButton.addEventListener('click', toggleStartPause);
 resetButton.addEventListener('click', reset);
 
+Notification.requestPermission();
+
 function startValues() {
 	let workTimeElement = document.querySelector('#work-time-options');
 	let totalTurnsElement = document.querySelector('#total-turns-options');
@@ -28,8 +30,8 @@ function startValues() {
 	isRunning = false;
 	isBreakTime = false;
 	workTime = (workTimeElement.options[workTimeElement.selectedIndex].value) * 60;
-	breakTime = ((workTimeElement.options[workTimeElement.selectedIndex].value)/5) * 60;
-	longBreakTime = ((workTimeElement.options[workTimeElement.selectedIndex].value)-10) * 60;
+	breakTime = ((workTimeElement.options[workTimeElement.selectedIndex].value) / 5) * 60;
+	longBreakTime = ((workTimeElement.options[workTimeElement.selectedIndex].value) - 10) * 60;
 	totalTurns = totalTurnsElement.options[totalTurnsElement.selectedIndex].value;
 	currentTurn = 1;
 	totalTime = workTime;
@@ -77,6 +79,7 @@ function finishTurn() {
 	runAnimation('swing');
 	nextTurn();
 	drawTurn();
+
 }
 
 function runAnimation(animation) {
@@ -95,8 +98,10 @@ function nextTurn() {
 	if (currentTurn <= totalTurns) {
 		if (isBreakTime) {
 			totalTime = currentTurn < totalTurns ? breakTime : longBreakTime;
+			showNotification("Hora de descansar", "Parabéns pelo trabalho, aproveite os próximos " + totalTime + " minutos para descansar");
 		} else {
 			totalTime = workTime;
+			showNotification("Voltar ao trabalho", "Você está quase lá, só mais " + totalTime + " minutos de trabalho");
 		}
 		timeRemaining = totalTime;
 	} else {
@@ -125,7 +130,11 @@ function setCirclePercent(percent) {
 	const circlePerimeter = 597;
 	const dashOffset = (circlePerimeter * (percent / 100));
 
-	circleElement.style.setProperty('--dash-offset', circlePerimeter-dashOffset);
+	circleElement.style.setProperty('--dash-offset', circlePerimeter - dashOffset);
+}
+
+function showNotification(messageHeader, messageBody) {
+	const notification = new Notification(messageHeader, { body: messageBody });
 }
 
 reset();
