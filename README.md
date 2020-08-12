@@ -4,6 +4,7 @@ Single Page Application baseada no projeto desenvolvido pela *TreinaWeb*.
 
 :blush: **As seguintes features foram adicionadas ao projeto original:**
 
+- Responsividade
 - Background degrade
 - Animações ao iniciar
 - Animações no fim de cada turno
