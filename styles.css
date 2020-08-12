@@ -111,3 +111,22 @@ button:hover {
 	transition: stroke-dashoffset 1s linear;
 }
 
+.dropdown-content {
+	align-items: center;
+	margin-top: 10px;
+}
+
+.dropdown-content > select {
+	background-color: var(--timer-color);
+	border: 1px solid rgba(255, 255, 255, .1);
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+	opacity: 70%;
+	transition: opacity 0.9s;
+}
+
+.dropdown-content > select:hover {
+	opacity: 100%;
+	transition: opacity 0.9s;
+}

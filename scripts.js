@@ -22,12 +22,15 @@ controlButton.addEventListener('click', toggleStartPause);
 resetButton.addEventListener('click', reset);
 
 function startValues() {
+	let workTimeElement = document.querySelector('#work-time-options');
+	let totalTurnsElement = document.querySelector('#total-turns-options');
+
 	isRunning = false;
 	isBreakTime = false;
-	workTime = 25 * 60;
-	breakTime = 5 * 60;
-	longBreakTime = 15 * 60;
-	totalTurns = 4;
+	workTime = (workTimeElement.options[workTimeElement.selectedIndex].value) * 60;
+	breakTime = ((workTimeElement.options[workTimeElement.selectedIndex].value)/5) * 60;
+	longBreakTime = ((workTimeElement.options[workTimeElement.selectedIndex].value)-10) * 60;
+	totalTurns = totalTurnsElement.options[totalTurnsElement.selectedIndex].value;
 	currentTurn = 1;
 	totalTime = workTime;
 	timeRemaining = totalTime;
