@@ -62,6 +62,7 @@ function reset() {
 	drawTime();
 	drawTurn();
 	runAnimation('rotateIn');
+	document.querySelector('.config-message').style.display = 'none';
 }
 
 function updateTimer() {
@@ -135,6 +136,11 @@ function setCirclePercent(percent) {
 
 function showNotification(messageHeader, messageBody) {
 	const notification = new Notification(messageHeader, { body: messageBody });
+	setTimeout(notification.close.bind(notification), 4000);
+}
+
+function showResetMessage() {
+	document.querySelector('.config-message').style.display = 'inline';
 }
 
 reset();
