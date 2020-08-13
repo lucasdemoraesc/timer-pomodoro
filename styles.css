@@ -137,7 +137,6 @@ button:hover {
 	font-size: 0.6em;
 	font-weight: 600;
 	display: none;
-	transition: display 0.6s;
 }
 
 .config-message > span {
