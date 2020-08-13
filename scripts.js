@@ -98,10 +98,10 @@ function nextTurn() {
 	if (currentTurn <= totalTurns) {
 		if (isBreakTime) {
 			totalTime = currentTurn < totalTurns ? breakTime : longBreakTime;
-			showNotification("Hora de descansar", "Parabéns pelo trabalho, aproveite os próximos " + totalTime + " minutos para descansar");
+			showNotification("Hora de descansar", "Parabéns pelo trabalho, aproveite os próximos minutos para descansar");
 		} else {
 			totalTime = workTime;
-			showNotification("Voltar ao trabalho", "Você está quase lá, só mais " + totalTime + " minutos de trabalho");
+			showNotification("Voltar ao trabalho", "Você está quase lá, só mais alguns minutos de trabalho");
 		}
 		timeRemaining = totalTime;
 	} else {
