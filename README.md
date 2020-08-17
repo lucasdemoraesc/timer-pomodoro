@@ -8,7 +8,7 @@ Single Page Application baseada no projeto desenvolvido pela [*TreinaWeb*](https
 - Responsividade
 - Animações
 - Deploy com vercel e netlify utilizando integração contínua
-- Botão de configuração (Tempo e quantidade de turnos)
+- Configurações para tempo/turnos
 - Notificações
 
 :nerd_face: **As seguintes features estão em desenvolvimento e serão adicionadas em breve:**
@@ -17,6 +17,7 @@ Single Page Application baseada no projeto desenvolvido pela [*TreinaWeb*](https
  - [x] ~~Animações~~
  - [x] ~~Botão de configuração~~
  - [x] ~~Notificações~~
+ - [ ] Configuração de notificações
 
 :hourglass: **Acesse em:** https://timer-pomodoro.vercel.app/ ou https://timerpomodoro.netlify.app/
 

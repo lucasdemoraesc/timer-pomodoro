@@ -112,11 +112,13 @@ button:hover {
 }
 
 .dropdown-content {
+	display: flex;
+	flex-flow: column;
 	align-items: center;
 	margin-top: 10px;
 }
 
-.dropdown-content > select {
+.select-options > select {
 	background-color: var(--timer-color);
 	border: 1px solid rgba(255, 255, 255, .1);
 	border-radius: 5px;
@@ -126,7 +128,22 @@ button:hover {
 	transition: opacity 0.6s;
 }
 
-.dropdown-content > select:hover {
+.select-options > select:hover {
 	opacity: 100%;
 	transition: opacity 0.6s;
+}
+
+.config-message {
+	font-size: 0.6em;
+	font-weight: 600;
+	display: none;
+}
+
+.config-message > span {
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.config-message > span > a {
+	color: tomato;
 }

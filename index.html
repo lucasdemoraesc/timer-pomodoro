@@ -36,20 +36,27 @@
 		</div>
 
 		<div id="drop-content" class="collapse dropdown-content">
-			<label for="work-time-options">Tempo:</label>
-			<select id="work-time-options" name="work-options">
-				<option value="25" selected>25 minutos</option>
-				<option value="35">35 minutos</option>
-				<option value="45">45 minutos</option>
-				<option value="55">55 minutos</option>
-			</select>
-			<label for="total-turns-options">Turnos:</label>
-			<select id="total-turns-options" name="qtde-turns">
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4" selected>4</option>
-				<option value="5">5</option>
-			</select>
+			<div class="select-options">
+				<label for="work-time-options">Tempo:</label>
+				<select id="work-time-options" name="work-options" onchange="showResetMessage()">
+					<option value="25" selected>25 minutos</option>
+					<option value="35">35 minutos</option>
+					<option value="45">45 minutos</option>
+					<option value="55">55 minutos</option>
+				</select>
+				<label for="total-turns-options">Turnos:</label>
+				<select id="total-turns-options" name="qtde-turns" onchange="showResetMessage()">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4" selected>4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="config-message">
+				<span>
+					<a href="javascript:reset()">Reinicie</a> para aplicar as modificações
+				</span>
+			</div>
 		</div>
 
 		<div class="time-mode animated zoomIn">Trabalho</div>
